@@ -13,10 +13,20 @@ const URI = 'http://10.146.16.37:8080/api/flwplan/getAllDTO'
 export const Contexto = React.createContext()
 
 const FlwPlan = () => {
+
+  //https://rapidapi.com/guides/request-headers-axios
+
   const [data, setData] = useState([])
 
   const getPessoa = async () => {
-    await axios.get(URI).then((res) => {
+    await axios.get(
+      URI,
+      {
+        headers: {
+          'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com',
+        }
+      }
+      ).then((res) => {
       //res.header("ccess-Control-Allow-OriginA", "*");
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
       setData(res.data)
