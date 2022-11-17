@@ -54,7 +54,10 @@ const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },

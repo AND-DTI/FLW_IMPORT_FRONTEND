@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 import {
   CButton,
   CCard,
@@ -15,6 +20,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
+<<<<<<< HEAD
 import useAuth from 'src/hooks/useAuth'
 
 
@@ -59,6 +65,10 @@ const Login = () => {
 
 
 
+=======
+
+const Login = () => {
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
@@ -74,21 +84,36 @@ const Login = () => {
                       <CInputGroupText>
                         <CIcon icon={cilUser} />
                       </CInputGroupText>
+<<<<<<< HEAD
                       <CFormInput placeholder="Username" autoComplete="username"
                        value={email} onChange={(e) => [setEmail(e.target.value), setError("")]}
                        />
+=======
+                      <CFormInput placeholder="Username" autoComplete="username" />
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupText>
                         <CIcon icon={cilLockLocked} />
                       </CInputGroupText>
+<<<<<<< HEAD
                       <CFormInput type="password" placeholder="Password" autoComplete="current-password"
                        value={senha} onChange={(e) => [setSenha(e.target.value), setError("")]}
+=======
+                      <CFormInput
+                        type="password"
+                        placeholder="Password"
+                        autoComplete="current-password"
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
                       />
                     </CInputGroup>
                     <CRow>
                       <CCol xs={6}>
+<<<<<<< HEAD
                         <CButton color="primary" className="px-4" onClick={handleLogin} >
+=======
+                        <CButton color="primary" className="px-4">
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
                           Login
                         </CButton>
                       </CCol>
@@ -97,7 +122,10 @@ const Login = () => {
                           Forgot password?
                         </CButton>
                       </CCol>
+<<<<<<< HEAD
                       <label style={{color:"red"}}>{error}</label>
+=======
+>>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
                     </CRow>
                   </CForm>
                 </CCardBody>
