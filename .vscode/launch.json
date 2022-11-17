@@ -8,11 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Iniciar o Edge em relação a localhost",
-<<<<<<< HEAD
-            "url": "http://localhost:3001",
-=======
             "url": "http://localhost:3000",
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
             //"url": "hdamdt5679:3000",
             "webRoot": "${workspaceFolder}"
         }

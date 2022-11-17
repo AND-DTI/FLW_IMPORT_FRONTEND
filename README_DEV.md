@@ -18,3 +18,8 @@ npm install --save styled-components
 
 
 
+-----------------------------
+#See:
+"The project was built assuming it is hosted at ./.
+You can control this with the homepage field in your package.json."
+
