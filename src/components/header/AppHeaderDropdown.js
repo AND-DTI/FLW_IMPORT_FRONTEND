@@ -21,22 +21,16 @@ import {
   cilUser,
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-<<<<<<< HEAD
 import useAuth from 'src/hooks/useAuth'
-=======
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 
 //import avatar8 from './../../assets/images/avatars/8.jpg'
 import avatar from './../../assets/images/avatars/avatar.jpg'
 
 
 const AppHeaderDropdown = () => {
-<<<<<<< HEAD
 
   const { signout } = useAuth()
 
-=======
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
   return (
     <CDropdown variant="nav-item">
       <CDropdownToggle placement="bottom-end" className="py-0" caret={false}>
@@ -96,15 +90,9 @@ const AppHeaderDropdown = () => {
           </CBadge>
         </CDropdownItem>
         <CDropdownDivider />
-<<<<<<< HEAD
         <CDropdownItem href="" role="button" onClick={signout}>
           <CIcon icon={cilLockLocked} className="me-2" />
           Sair
-=======
-        <CDropdownItem href="#">
-          <CIcon icon={cilLockLocked} className="me-2" />
-          Lock Account
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
         </CDropdownItem>
       </CDropdownMenu>
     </CDropdown>
@@ -112,7 +100,6 @@ const AppHeaderDropdown = () => {
 }
 
 export default AppHeaderDropdown
-<<<<<<< HEAD
 //Lock Account -> Sair
 /*
  <CDropdownItem href="#">
@@ -120,5 +107,3 @@ export default AppHeaderDropdown
           Sair
         </CDropdownItem>
 */
-=======
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d

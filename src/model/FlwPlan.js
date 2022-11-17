@@ -6,17 +6,12 @@ import {
   GridLinkOperator
 } from '@mui/x-data-grid'
 
-<<<<<<< HEAD
 const URI = 'http://localhost:3000/api/customers/getAll'
 //'http://10.146.16.37:8080/api/flwplan/getAllDTO'
-=======
-const URI = 'http://10.146.16.37:8080/api/flwplan/getAllDTO'
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 
 
 
 export const Contexto = React.createContext()
-<<<<<<< HEAD
 //https://rapidapi.com/guides/request-headers-axios
 /*const config = {
   headers: {
@@ -27,33 +22,14 @@ export const Contexto = React.createContext()
 const FlwPlan = () => {
 
 
-=======
-
-const FlwPlan = () => {
-
-  //https://rapidapi.com/guides/request-headers-axios
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 
   const [data, setData] = useState([])
 
   const getPessoa = async () => {
-<<<<<<< HEAD
 
 
     await axios.get(URI).then((res) => {
       //res.header("ccess-Control-Allow-OriginA", "*");
-=======
-    await axios.get(
-      URI,
-      {
-        headers: {
-          'x-rapidapi-host': 'famous-quotes4.p.rapidapi.com',
-        }
-      }
-      ).then((res) => {
-      //res.header("ccess-Control-Allow-OriginA", "*");
-      axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
       setData(res.data)
     })
   }
@@ -62,12 +38,8 @@ const FlwPlan = () => {
     getPessoa()
   }, [])
 
-<<<<<<< HEAD
   console.log("data ------> "+JSON.stringify(data))
   //return 'datagrig1...'
-=======
-  console.log("data:------>" )
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
   return (
     <Contexto.Provider value={ [data] }>
       <Datagrid1 />
@@ -84,24 +56,16 @@ String codcia, Integer ponum, String potype, String invoice, Integer anoinvc, St
 String dtemiss, String origem, String ckpcod, Integer ckplevel, String plndo, Integer sla, Integer slaacum, Integer predec
 */
 const columns = [
-<<<<<<< HEAD
   /*{ field: 'codcia',  headerName: 'Cia',        width: '20' },
-=======
-  { field: 'codcia',  headerName: 'Cia',        width: '20' },
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
   { field: 'ponum',   headerName: 'PO',         width: 65, type:'number', },
   { field: 'potype',  headerName: 'Type',       flex: 1},
   { field: 'invoice', headerName: 'Invoice',    flex: 1 },
   { field: 'anoinvc', headerName: 'Ano',        type:'number', flex: 1 },
   { field: 'tpplan',  headerName: 'Plano/Real',  flex: 1 },
-<<<<<<< HEAD
   { field: 'plnseq',  headerName: 'Sequencia',   type:'number', flex: 1 },*/
   { field: 'order_id',  headerName: 'Order',     width: '20' },
   { field: 'product_id',headerName: 'Product',   width: '30'},
   { field: 'amount',    headerName: 'quantity'},
-=======
-  { field: 'plnseq',  headerName: 'Sequencia',   type:'number', flex: 1 },
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 ]
 const Datagrid1 = () => {
   const [data] = React.useContext(Contexto);
@@ -173,10 +137,7 @@ const Datagrid1 = () => {
 }
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 1dff1fa913bbd65106abb0b7721f0c4b6a7f708d
 export default FlwPlan
