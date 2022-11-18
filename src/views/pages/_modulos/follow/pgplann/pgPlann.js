@@ -4,6 +4,7 @@ import {
   CCol, CRow
 } from '@coreui/react'
 import FlwPlan from 'src/model/FlwPlan'
+import GraphPlan from './GraphPlan'
 
 
 
@@ -21,7 +22,7 @@ const pgPlann = () => {
         <p className="text-medium-emphasis small">
           Order&#39;s Activity <code>@Chart</code>.
         </p>
-        <h1>chart....</h1>
+        <GraphPlan />
       </CCardBody>
 
       <CCardBody>

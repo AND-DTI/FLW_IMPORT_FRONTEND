@@ -6,8 +6,10 @@ import {
   GridLinkOperator
 } from '@mui/x-data-grid'
 
-const URI = 'http://localhost:3000/api/customers/getAll'
-//'http://10.146.16.37:8080/api/flwplan/getAllDTO'
+
+//const URI = 'http://localhost:3000/api/customers/getAll'
+//const URI = 'http://10.146.16.37:8080/api/flwplan/getAllDTO'
+const URI = 'http://hdamdt5679:8080/api/flwplan/getAllDTO'
 
 
 
@@ -39,7 +41,7 @@ const FlwPlan = () => {
   }, [])
 
   console.log("data ------> "+JSON.stringify(data))
-  //return 'datagrig1...'
+  //return 'datagrig1....'
   return (
     <Contexto.Provider value={ [data] }>
       <Datagrid1 />
@@ -56,16 +58,23 @@ String codcia, Integer ponum, String potype, String invoice, Integer anoinvc, St
 String dtemiss, String origem, String ckpcod, Integer ckplevel, String plndo, Integer sla, Integer slaacum, Integer predec
 */
 const columns = [
-  /*{ field: 'codcia',  headerName: 'Cia',        width: '20' },
-  { field: 'ponum',   headerName: 'PO',         width: 65, type:'number', },
-  { field: 'potype',  headerName: 'Type',       flex: 1},
-  { field: 'invoice', headerName: 'Invoice',    flex: 1 },
-  { field: 'anoinvc', headerName: 'Ano',        type:'number', flex: 1 },
-  { field: 'tpplan',  headerName: 'Plano/Real',  flex: 1 },
-  { field: 'plnseq',  headerName: 'Sequencia',   type:'number', flex: 1 },*/
-  { field: 'order_id',  headerName: 'Order',     width: '20' },
+  { field: 'codcia',   headerName: 'Cia',         width: '60' },
+  { field: 'ponum',    headerName: 'PO',          width: 95},
+  { field: 'potype',   headerName: 'Type',        width: 10},
+  { field: 'invoice',  headerName: 'Invoice',     width: 120 },
+  { field: 'anoinvc',  headerName: 'Ano',         width: 30, type:'number'},
+  { field: 'tpplan',   headerName: 'P/R',         width: 55 },
+  { field: 'plnseq',   headerName: 'Seq.',        width: 40, type:'number' },
+  { field: 'dtemiss',  headerName: 'PO Creating', width: 110},
+  { field: 'origem',   headerName: 'Origin',      width: 40},
+  { field: 'ckpcod',   headerName: 'Check P.',    width: 70},
+  { field: 'ckplevel', headerName: 'Level',       width: 40, type:'number' },
+  { field: 'plndo',  headerName: 'Activity',  flex: 1},
+
+
+/*{ field: 'order_id',  headerName: 'Order',     width: '20' },
   { field: 'product_id',headerName: 'Product',   width: '30'},
-  { field: 'amount',    headerName: 'quantity'},
+  { field: 'amount',    headerName: 'quantity'},*/
 ]
 const Datagrid1 = () => {
   const [data] = React.useContext(Contexto);
@@ -74,6 +83,8 @@ const Datagrid1 = () => {
     <DataGrid
       rows={data}
       columns={columns}
+      //getRowId={(row: any) =>  row.first_name + row.salary}
+      getRowId={row => row.ponum + row.plnseq}
       pageSize={12}
       //disableColumnFilter
       disableColumnSelector
