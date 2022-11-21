@@ -29,7 +29,7 @@ const pgPlann = () => {
         <p className="text-medium-emphasis small">
           Order&#39;s Activity List <code>&lt;@FlwPlann&gt;</code>.
         </p>
-        <FlwPlan />
+        [FlwPlan /]
       </CCardBody>
 
     </CCard>

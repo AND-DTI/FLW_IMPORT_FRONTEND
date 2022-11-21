@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import teste from './teste.json'
+
+import { Gantt, Task, ViewMode } from "gantt-task-react";
+import { initTasks, getStartEndDateForProject } from "./helpers";
+import { ViewSwitcher } from "./ViewSwitcher";
+
 
 
 
@@ -12,7 +18,7 @@ const GraphPlan = () => {
 
 
   const [data, setData] = useState([])
-
+/*
   const getPessoa = async () => {
     await axios.get(URI).then((res) => {
       setData(res.data)
@@ -23,6 +29,7 @@ const GraphPlan = () => {
     getPessoa()
   }, [])
 
+*/
   return (
     <Contexto.Provider value={ [data] }>
       <Graph1 />
@@ -62,7 +69,13 @@ const Graph1 = () => {
   const [dados] = React.useContext(Contexto);
 
   let fields = "";
-  {dados.map((data, idx) => (
+  /*{dados.map((data, idx) => (
+    fields = fields + data.ckpcod + "; "
+  ))}*/
+
+
+  const dados2 = teste;
+  {dados2.map((data, idx) => (
     fields = fields + data.ckpcod + "; "
   ))}
 
@@ -70,7 +83,7 @@ const Graph1 = () => {
 
   <div style={{ height: 500, width: '100%' }}>
     <h1>chart....</h1>
-    <label>data size: {dados.length}</label><br/>
+    <label>data size: {dados2.length}</label><br/>
     <label>data: {fields}</label>
 
 

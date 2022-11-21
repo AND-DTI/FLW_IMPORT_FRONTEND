@@ -15,7 +15,9 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
-import useAuth from 'src/hooks/useAuth'
+import  useAuth  from '../../../hooks/useAuth'
+//import  { useAuth } from '../../../hooks/useAuth'
+//import useAuth from '../ src/hooks/useAuth'
 
 
 
@@ -32,11 +34,12 @@ const Login = () => {
   const [senha, setSenha] = useState("")
   const [error, setError] = useState("")
   const { signin } = useAuth()
+  //const  signin  = useAuth()
   const navigate = useNavigate()
 
 
   const handleLogin = () => {
-    if (!email | !senha) {
+    if (!email || !senha) {
       setError("*Preencha todos os campos");
       return;
     }

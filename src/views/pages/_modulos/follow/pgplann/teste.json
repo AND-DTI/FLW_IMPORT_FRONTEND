@@ -1,0 +1,5 @@
+[
+  { "codcia": "05001", "ponum": 90001234, "potype": "X0", "invoice": "-", "anoinvc": 0, "tpplan": "P", "plnseq": 1, "dtemiss": 20221119, "origem": "JPY", "ckpcod": "CP_0", "ckplevel": 1, "plndo": "Create Order", "sla": 0, "slaacum": 0, "predec": 0 },
+  { "codcia": "05001", "ponum": 90001234, "potype": "X0", "invoice": "-", "anoinvc": 0, "tpplan": "P", "plnseq": 2, "dtemiss": 20221119, "origem": "JPY", "ckpcod": "CP_1", "ckplevel": 1, "plndo": "Sent vendor", "sla": 4, "slaacum": 4, "predec": 1 }
+]
+

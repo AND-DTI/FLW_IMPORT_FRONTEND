@@ -21,13 +21,14 @@ const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
 
 
 
-
+/*
 const Private = ({ Item }) => {
   //const signed = false;
   const { signed } = useAuth();
 
   return signed > 0 ? <Item /> : <Login />
-}
+  //return signed > 0 ? React.createElement(Item, null) : React.createElement(Login, null);
+}*/
 
 
 class App extends Component {
@@ -37,11 +38,11 @@ class App extends Component {
       <HashRouter>
         <Suspense fallback={loading}>
           <Routes>
-            <Route exact path="/login" name="Login Page" element={<Login />} />
-            <Route exact path="/register" name="Register Page" element={<Register />} />
-            <Route exact path="/404" name="Page 404" element={<Page404 />} />
-            <Route exact path="/500" name="Page 500" element={<Page500 />} />
-            <Route path="*" name="Home" element={<Private Item={DefaultLayout} /> } />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/404" element={<Page404 />} />
+            <Route path="/500" element={<Page500 />} />
+            <Route path="*" element={<DefaultLayout />} />
           </Routes>
         </Suspense>
       </HashRouter>
@@ -49,6 +50,8 @@ class App extends Component {
     )
   }
 }
+
+//************** <Route path="*" name="Home" element={<Private Item={DefaultLayout} /> } />
 
 //<Route path="*" name="Home" element={<DefaultLayout />} />
 //<Route exact path="/home" element={<Private Item={Home} />} />
