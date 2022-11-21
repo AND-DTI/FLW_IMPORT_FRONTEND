@@ -5,7 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-'use strict'
+
+//const path = require("path")
+
+//'use strict'
 
 module.exports = {
   collectCoverageFrom: [
@@ -14,4 +17,8 @@ module.exports = {
     '!src/serviceWorker.js',
     '!src/polyfill.js',
   ],
+
+
+  //moduleDirectories: ["node_modules", path.join(__dirname, "src")]
+
 }

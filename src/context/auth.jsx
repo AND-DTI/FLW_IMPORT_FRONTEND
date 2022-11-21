@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
 
     let loginResult = "200"; //get from api
 
-    if (loginResult=="200"){
+    if (loginResult==="200"){
 
       let newUser = [{ email, password }];
       localStorage.setItem("users_bd", JSON.stringify(newUser));

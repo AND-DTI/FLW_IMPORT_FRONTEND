@@ -12,7 +12,8 @@ import {
   CToastHeader,
   CToaster,
 } from '@coreui/react'
-import { DocsExample } from 'src/components'
+//import { DocsExample } from 'src/components'
+import { DocsExample } from 'components'
 
 const ExampleToast = () => {
   const [toast, addToast] = useState(0)

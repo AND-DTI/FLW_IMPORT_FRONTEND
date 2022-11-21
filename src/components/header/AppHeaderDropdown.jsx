@@ -21,10 +21,8 @@ import {
   cilUser,
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
-import useAuth from 'src/hooks/useAuth'
-
-//import avatar8 from './../../assets/images/avatars/8.jpg'
-import avatar from './../../assets/images/avatars/avatar.jpg'
+import useAuth from 'hooks/useAuth'
+import avatar from 'assets/images/avatars/avatar.jpg'
 
 
 const AppHeaderDropdown = () => {

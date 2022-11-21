@@ -1,6 +1,6 @@
 Install libs:
 npm install --save styled-components
-pm install gantt-task-react
+npm install gantt-task-react
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest @types/react-router-dom
 
 

@@ -3,7 +3,8 @@ import {
   CCard, CCardBody, CCardHeader,
   CCol, CRow
 } from '@coreui/react'
-import FlwPlan from 'src/model/FlwPlan'
+//import FlwPlan from 'src/model/FlwPlan'
+import FlwPlan from  '../../../../../model/FlwPlan'
 import GraphPlan from './GraphPlan'
 
 

@@ -5,7 +5,10 @@ import {
   CCard, CCardBody, CCardHeader,
   CCol, CRow
 } from '@coreui/react'
-import Pessoa from 'src/model/Pessoa'
+//import Pessoa from 'src/model/Pessoa'
+import Pessoa from '../../../model/Pessoa'
+
+
 
 
 const Page1 = () => {
