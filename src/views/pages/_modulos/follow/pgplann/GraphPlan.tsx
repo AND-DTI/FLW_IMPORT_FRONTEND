@@ -3,7 +3,8 @@ import axios from 'axios'
 import teste from './teste.json'
 
 import { Gantt, Task, ViewMode } from "gantt-task-react";
-import { initTasks, getStartEndDateForProject } from "./helpers";
+//import { initTasks, getStartEndDateForProject } from "./helpers";
+import { initTasks, getStartEndDateForProject } from "./helper";
 import { ViewSwitcher } from "./ViewSwitcher";
 
 
