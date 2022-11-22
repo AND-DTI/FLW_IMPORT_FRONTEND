@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import teste from './teste.json'
 
-import { Gantt, Task, ViewMode } from "gantt-task-react";
+import { Gantt, Task, ViewMode } from "gantt-task-react"
 //import { initTasks, getStartEndDateForProject } from "./helpers";
-import { initTasks, getStartEndDateForProject } from "./helper";
-import { ViewSwitcher } from "./ViewSwitcher";
+import { initTasks, getStartEndDateForProject } from "./helper"
+import { ViewSwitcher } from "./ViewSwitcher"
 
 
 
@@ -52,7 +52,7 @@ const Graph1 = () => {
   } else if (view === ViewMode.Week) {
     columnWidth = 250;
   }
-
+/*
   const handleTaskChange = (task: Task) => {
     console.log("On date change Id:" + task.id);
     let newTasks = tasks.map((t) => (t.id === task.id ? task : t));
@@ -98,10 +98,7 @@ const Graph1 = () => {
     setTasks(tasks.map((t) => (t.id === task.id ? task : t)));
     console.log("On expander click Id:" + task.id);
   };
-
-
-
-
+*/
 
 
 
@@ -110,16 +107,47 @@ const Graph1 = () => {
 
 
   return (
+    <div style={{ height: 500, width: '100%' }}>
+      <h3>Gantt With Unlimited Height</h3>
+      <Gantt
+          tasks={tasks}
+          viewMode={view}
+          listCellWidth={isChecked ? "155px" : ""}
+          columnWidth={columnWidth}
+      />
+    </div>
+
+
+  )
+}
+
+/*
+
+ <ViewSwitcher
+      onViewModeChange={(viewMode: ViewMode) => setView(viewMode)}
+      onViewListChange={setIsChecked}
+      isChecked={isChecked}
+    />
+    <h3>Gantt With Unlimited Height</h3>
+    <Gantt
+        tasks={tasks}
+        viewMode={view}
+        onDateChange={handleTaskChange}
+        onDelete={handleTaskDelete}
+        onProgressChange={handleProgressChange}
+        onDoubleClick={handleDblClick}
+        onSelect={handleSelect}
+        onExpanderClick={handleExpanderClick}
+        listCellWidth={isChecked ? "155px" : ""}
+        columnWidth={columnWidth}
+    />
+
 
   <div style={{ height: 500, width: '100%' }}>
     <h1>chart....</h1>
     <label>data size: {dados2.length}</label><br/>
     <label>data: {fields}</label>
-
-
   </div>
-  )
-}
-
+*/
 
 export default GraphPlan
