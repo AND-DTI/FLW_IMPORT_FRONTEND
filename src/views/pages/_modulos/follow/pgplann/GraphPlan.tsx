@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import teste from './teste.json'
+import React, { /*useEffect,*/ useState } from 'react'
+//import axios from 'axios'
+//import teste from './teste.json'
 
-import { Gantt, Task, ViewMode } from "gantt-task-react"
+//import { Gantt, Task, ViewMode } from "gantt-task-react"
 //import { initTasks, getStartEndDateForProject } from "./helpers";
-import { initTasks, getStartEndDateForProject } from "./helper"
-import { ViewSwitcher } from "./ViewSwitcher"
+import { initTasks/*, getStartEndDateForProject*/ } from "./helper"
+//import { ViewSwitcher } from "./ViewSwitcher"
+import "./index.css"
+import { Gantt, Task/*, EventOption, StylingOption, ViewMode*/, DisplayOption } from 'gantt-task-react';
 
 
 
-
-const URI = 'http://hdamdt5679:8080/api/flwplan/getAllDTO'
-//export const Contexto = React.createContext()
+//const URI = 'http://hdamdt5679:8080/api/flwplan/getAllDTO'
+//const taskDefault = initTasks() //[{name:'task1'}]
+//export const Contexto = React.createContext(taskDefault)
 
 /*const GraphPlan = () => {
 
@@ -24,26 +26,59 @@ const URI = 'http://hdamdt5679:8080/api/flwplan/getAllDTO'
   )
 }*/
 const GraphPlan = () => {
+
+  //const [tasks, setTasks] = useState<Task[]>(
+  /*const [tasks, setTasks] = useState<Task[]>(
+   [
+    {
+      start: new Date(2020, 1, 1),
+      end: new Date(2020, 1, 2),
+      name: 'Idea',
+      id: 'Task 0',
+      type:'task',
+      progress: 45,
+      isDisabled: true,
+      styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d' },
+    },
+   ]
+  )*/
+  const [tasks, setTasks] = useState<Task[]>(initTasks())
+  //setTasks(initTasks())
+
+
   return (
-      <Graph1 />
+
+    <Gantt
+          tasks={tasks}
+          rtl={false}
+
+    />
   )
 }
 
+//onViewListChange(!isChecked)
 
-//DATA GRID 1:
-//https://levelup.gitconnected.com/lets-loop-data-inside-a-react-component-832e9130ed0f
 
-const Graph1 = () => {
+/*
+   <div style={{ height: 500, width: '100%' }}>
+      <h3>Gantt With Unlimited Height</h3>
+    </div>
+*/
 
+
+
+
+
+/*
   let fields = "";
   const dados2 = teste;
   {dados2.map((data, idx) => (
     fields = fields + data.ckpcod + "; "
   ))}
+*/
 
 
-
-  const [view, setView] = useState<ViewMode>(ViewMode.Day);
+  /*const [view, setView] = useState<ViewMode>(ViewMode.Day);
   const [tasks, setTasks] = useState<Task[]>(initTasks());
   const [isChecked, setIsChecked] = useState(true);
   let columnWidth = 60;
@@ -51,7 +86,7 @@ const Graph1 = () => {
     columnWidth = 300;
   } else if (view === ViewMode.Week) {
     columnWidth = 250;
-  }
+  }*/
 /*
   const handleTaskChange = (task: Task) => {
     console.log("On date change Id:" + task.id);
@@ -103,24 +138,6 @@ const Graph1 = () => {
 
 
 
-
-
-
-  return (
-    <div style={{ height: 500, width: '100%' }}>
-      <h3>Gantt With Unlimited Height</h3>
-      <Gantt
-          tasks={tasks}
-          viewMode={view}
-          listCellWidth={isChecked ? "155px" : ""}
-          columnWidth={columnWidth}
-      />
-    </div>
-
-
-  )
-}
-
 /*
 
  <ViewSwitcher
@@ -141,6 +158,14 @@ const Graph1 = () => {
         listCellWidth={isChecked ? "155px" : ""}
         columnWidth={columnWidth}
     />
+
+ <Gantt
+          tasks={tasks}
+          viewMode={view}
+          listCellWidth={isChecked ? "155px" : ""}
+          columnWidth={columnWidth}
+      />
+
 
 
   <div style={{ height: 500, width: '100%' }}>
