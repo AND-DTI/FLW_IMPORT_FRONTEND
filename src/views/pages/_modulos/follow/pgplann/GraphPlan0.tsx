@@ -4,16 +4,17 @@ import React, { /*useEffect,*/ useState } from 'react'
 
 //import { Gantt, Task, ViewMode } from "gantt-task-react"
 //import { initTasks, getStartEndDateForProject } from "./helpers";
-import { initTasks/*, getStartEndDateForProject*/ } from "./helper"
+import { initTasks/*, getStartEndDateForProject*/ } from "./graph1/helper"
 //import { ViewSwitcher } from "./ViewSwitcher"
-import "./index.css"
-import { Gantt, Task/*, EventOption, StylingOption, ViewMode*/, DisplayOption } from 'gantt-task-react';
+import "./graph1/index.css"
+import { Gantt, Task/*, EventOption, StylingOption, ViewMode, DisplayOption*/ } from 'gantt-task-react';
 
 
 
 //const URI = 'http://hdamdt5679:8080/api/flwplan/getAllDTO'
 //const taskDefault = initTasks() //[{name:'task1'}]
 //export const Contexto = React.createContext(taskDefault)
+export const Contexto = React.createContext({})
 
 /*const GraphPlan = () => {
 
@@ -42,7 +43,7 @@ const GraphPlan = () => {
     },
    ]
   )*/
-  const [tasks, setTasks] = useState<Task[]>(initTasks())
+  const [tasks, _setTasks] = useState<Task[]>(initTasks())
   //setTasks(initTasks())
 
 
